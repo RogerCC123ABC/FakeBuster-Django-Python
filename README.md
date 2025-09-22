@@ -5,5 +5,5 @@ Website made with the Django framework, Python programming language, HTML and Bo
 <li>@danielisaisal</li>
 <li>@memotas98</li>
 <li>@OzielLM</li>
-<li>@RogerCC123ABC</li>
+<li>@Rogelio-CC</li>
 <li>@GerardoYael13</li>
