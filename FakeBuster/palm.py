@@ -1,7 +1,7 @@
 import google.generativeai as genai
 from . import traductor
 
-genai.configure(api_key='AIzaSyBw6ZSqOh-mlKJ-Hw_i5xnoV0zU-w-8pow') #Sustituir por la verdader api key que te ofrece Google developer
+genai.configure(api_key='api_key') #Sustituir por tu api key que te ofrece Google Cloud Console y Google AI Studio
 model = genai.GenerativeModel('gemini-1.5-flash')
 
 
