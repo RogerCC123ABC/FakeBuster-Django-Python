@@ -1,22 +1,17 @@
-import google.generativeai as palm
+import google.generativeai as genai
 from . import traductor
 
-palm.configure(api_key='api key') #Sustituir por la verdader api key que te ofrece Google developer
+genai.configure(api_key='AIzaSyBw6ZSqOh-mlKJ-Hw_i5xnoV0zU-w-8pow') #Sustituir por la verdader api key que te ofrece Google developer
+model = genai.GenerativeModel('gemini-1.5-flash')
 
-generate_text_model = [m for m in palm.list_models() if 'generateText' in m.supported_generation_methods][0].name
 
 def buscarInformacion(texto):
     textoTraducidoAlIngles = traductor.traducirAIngles(texto)
     
     prompt = textoTraducidoAlIngles
 
-    completion = palm.generate_text(
-        model=generate_text_model,
-        prompt=prompt,
-        temperature=0,
-        max_output_tokens=800,
-    )
+    completion = model.generate_content(prompt)
     
-    textoTraducidoAlEspañol = traductor.traducirAEspañol(completion.result)
+    textoTraducidoAlEspañol = traductor.traducirAEspañol(completion.text)
 
     return textoTraducidoAlEspañol
