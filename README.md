@@ -1,4 +1,4 @@
-### FakeBuster
+# FakeBuster
 FakeBuster es una aplicación web desarrollada con Django que ayuda a detectar posible desinformación en noticias. Permite analizar una noticia desde su URL o ingresando manualmente título, autor y fecha, y utiliza Inteligencia Artificial para evaluar su veracidad.
 
 FakeBuster ofrece dos formas de entrada:
@@ -38,7 +38,7 @@ traductor.py
 ---
 
 ## Estructura principal del proyecto
-´´´
+```
 FakeBuster/
 ├── __init__.py                # Inicializa la app Django
 ├── admin.py                   # Registro de modelos en el admin (vacío)
@@ -71,7 +71,7 @@ FakeBusterWeb/
 manage.py                       # Comando estándar de Django
 README.md                       # Documentación del proyecto
 db.sqlite3                      # Base de datos SQLite usada por defecto
-´´´
+```
 
 ---
 
@@ -90,10 +90,10 @@ Necesitas instalar:
 2. Instalar dependencias.
 3. Ejecutar migraciones (aunque el proyecto no define modelos activos).
 4. Iniciar el servidor:
-´´´bash
+```bash
 python manage.py migrate
 python manage.py runserver
-´´´
+```
 5. Abrir en el navegador:
 http://127.0.0.1:8000/fakebuster/
 
